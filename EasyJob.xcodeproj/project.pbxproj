@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		043E8AF62EFD73BE005E7CE7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8AF52EFD73BE005E7CE7 /* Auth */; };
+		043E8B462EFD7FC3005E7CE7 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8B452EFD7FC3005E7CE7 /* Supabase */; };
+		043E8B482EFD805D005E7CE7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8B472EFD805D005E7CE7 /* Functions */; };
+		043E8B4A2EFD805D005E7CE7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8B492EFD805D005E7CE7 /* PostgREST */; };
+		043E8B4C2EFD805D005E7CE7 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8B4B2EFD805D005E7CE7 /* Realtime */; };
+		043E8B4E2EFD805D005E7CE7 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8B4D2EFD805D005E7CE7 /* Storage */; };
+		043E8BA32EFD86F8005E7CE7 /* cv_template.docx in Resources */ = {isa = PBXBuildFile; fileRef = 043E8BA22EFD86F8005E7CE7 /* cv_template.docx */; };
+		043E8BA82EFDA0AF005E7CE7 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 043E8BA72EFDA0AF005E7CE7 /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		043E8A962EFD6F99005E7CE7 /* EasyJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043E8BA22EFD86F8005E7CE7 /* cv_template.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = cv_template.docx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		04F5676B2EFDD027002E9302 /* Exceptions for "Features" folder in "EasyJob" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CVBuilder/FromProfile.swift,
+			);
+			target = 043E8A952EFD6F99005E7CE7 /* EasyJob */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		043E8AA92EFD701C005E7CE7 /* Exceptions for "Core" folder in "Copy Bundle Resources" phase from "EasyJob" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 043E8A942EFD6F99005E7CE7 /* Resources */;
+			membershipExceptions = (
+				Auth/AuthService.swift,
+				Auth/SessionStore.swift,
+				Models/JobApplication.swift,
+				Models/JobPost.swift,
+				Models/Profile.swift,
+				Network/SupabaseClientProvider.swift,
+			);
+		};
+		043E8B0D2EFD78F9005E7CE7 /* Exceptions for "Features" folder in "Copy Bundle Resources" phase from "EasyJob" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 043E8A942EFD6F99005E7CE7 /* Resources */;
+			membershipExceptions = (
+				Candidate/CandidateTabView.swift,
+				CVBuilder/FromProfile.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		043E8A982EFD6F99005E7CE7 /* EasyJob */ = {
+		043E8A982EFD6F99005E7CE7 /* App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EasyJob;
+			path = App;
+			sourceTree = "<group>";
+		};
+		043E8AA42EFD6FFB005E7CE7 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				043E8AA92EFD701C005E7CE7 /* Exceptions for "Core" folder in "Copy Bundle Resources" phase from "EasyJob" target */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		043E8AC22EFD7107005E7CE7 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				04F5676B2EFDD027002E9302 /* Exceptions for "Features" folder in "EasyJob" target */,
+				043E8B0D2EFD78F9005E7CE7 /* Exceptions for "Features" folder in "Copy Bundle Resources" phase from "EasyJob" target */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +85,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043E8B4E2EFD805D005E7CE7 /* Storage in Frameworks */,
+				043E8B4A2EFD805D005E7CE7 /* PostgREST in Frameworks */,
+				043E8B482EFD805D005E7CE7 /* Functions in Frameworks */,
+				043E8B462EFD7FC3005E7CE7 /* Supabase in Frameworks */,
+				043E8B4C2EFD805D005E7CE7 /* Realtime in Frameworks */,
+				043E8AF62EFD73BE005E7CE7 /* Auth in Frameworks */,
+				043E8BA82EFDA0AF005E7CE7 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,8 +101,11 @@
 		043E8A8D2EFD6F99005E7CE7 = {
 			isa = PBXGroup;
 			children = (
-				043E8A982EFD6F99005E7CE7 /* EasyJob */,
+				043E8AC22EFD7107005E7CE7 /* Features */,
+				043E8AA42EFD6FFB005E7CE7 /* Core */,
+				043E8A982EFD6F99005E7CE7 /* App */,
 				043E8A972EFD6F99005E7CE7 /* Products */,
+				043E8BA22EFD86F8005E7CE7 /* cv_template.docx */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +133,19 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				043E8A982EFD6F99005E7CE7 /* EasyJob */,
+				043E8A982EFD6F99005E7CE7 /* App */,
+				043E8AA42EFD6FFB005E7CE7 /* Core */,
+				043E8AC22EFD7107005E7CE7 /* Features */,
 			);
 			name = EasyJob;
 			packageProductDependencies = (
+				043E8AF52EFD73BE005E7CE7 /* Auth */,
+				043E8B452EFD7FC3005E7CE7 /* Supabase */,
+				043E8B472EFD805D005E7CE7 /* Functions */,
+				043E8B492EFD805D005E7CE7 /* PostgREST */,
+				043E8B4B2EFD805D005E7CE7 /* Realtime */,
+				043E8B4D2EFD805D005E7CE7 /* Storage */,
+				043E8BA72EFDA0AF005E7CE7 /* ZIPFoundation */,
 			);
 			productName = EasyJob;
 			productReference = 043E8A962EFD6F99005E7CE7 /* EasyJob.app */;
@@ -94,6 +175,10 @@
 			);
 			mainGroup = 043E8A8D2EFD6F99005E7CE7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				043E8BA62EFDA0AF005E7CE7 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 043E8A972EFD6F99005E7CE7 /* Products */;
 			projectDirPath = "";
@@ -109,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043E8BA32EFD86F8005E7CE7 /* cv_template.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +410,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		043E8BA62EFDA0AF005E7CE7 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.20;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		043E8AF52EFD73BE005E7CE7 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		043E8B452EFD7FC3005E7CE7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		043E8B472EFD805D005E7CE7 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		043E8B492EFD805D005E7CE7 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		043E8B4B2EFD805D005E7CE7 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		043E8B4D2EFD805D005E7CE7 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8AF42EFD73BE005E7CE7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		043E8BA72EFDA0AF005E7CE7 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 043E8BA62EFDA0AF005E7CE7 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 043E8A8E2EFD6F99005E7CE7 /* Project object */;
 }
